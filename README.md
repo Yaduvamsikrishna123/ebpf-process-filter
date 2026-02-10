@@ -44,7 +44,7 @@ The eBPF program attaches to the cgroup connect hook and:
 make
 sudo ./loader
 
-✅ Test
+##✅ Test
 
 Create a test process:
 
@@ -66,7 +66,7 @@ Allowed for other processes:
 
 nc -vz 1.1.1.1 80
 
-🎯 Use Cases
+##🎯 Use Cases
 
 Runtime security agents
 
