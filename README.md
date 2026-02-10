@@ -43,3 +43,35 @@ The eBPF program attaches to the cgroup connect hook and:
 ```bash
 make
 sudo ./loader
+
+✅ Test
+
+Create a test process:
+
+cp /bin/nc myprocess
+chmod +x myprocess
+
+
+Blocked connection:
+
+./myprocess -vz 1.1.1.1 80
+
+
+Expected:
+
+Operation not permitted
+
+
+Allowed for other processes:
+
+nc -vz 1.1.1.1 80
+
+🎯 Use Cases
+
+Runtime security agents
+
+Container sandboxing
+
+Zero-trust networking
+
+Process-level firewall policies
